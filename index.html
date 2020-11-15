@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Pizza Order Form</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link href="style.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+    <div class="container">
+        <nav>
+            <ul id="tabs" class="nav nav-tabs">
+                <li class="nav-item">
+                    <a class="nav-link active" href="#pizza">Pizza</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#delivery">Delivery</a>
+                </li>
+                <li class="nav-item" id="confirmationtab">
+                    <a class="nav-link" href="#confirm">Confirmation</a>
+                </li>
+            </ul>
+        </nav>
+
+        <div class="tab-content">
+            <div id="pizza" class="tab-pane active">
+                <h2>Pizza</h2>
+                <h3>What kind of pizza would you like?</h3>
+                <div class="formgroup">
+                    <label for="small">Small: $7.00 - </label>
+                    <input type="radio" id="small" value="small" name="pizza" checked>
+                </div>
+                <div class="formgroup">
+                    <label for="medium">Medium: $9.00 - </label>
+                    <input type="radio" id="medium" value="medium" name="pizza">
+                </div>
+                <div class="formgroup">
+                    <label for="large">Large: $12.00 - </label>
+                    <input type="radio" id="large" value="large" name="pizza">
+                </div>
+                <h3>What kind of crust would you like?</h3>
+                <div class="formgroup">
+                    <label for="thin">Thin - </label>
+                    <input type="radio" id="thin" value="thin" name="crust" checked>
+                </div>
+                <div class="formgroup">
+                    <label for="pan">Pan - </label>
+                    <input type="radio" id="pan" value="pan" name="crust">
+                </div>
+                <div class="formgroup">
+                    <label for="nongluten">Gluten Free - </label>
+                    <input type="radio" id="nongluten" value="nongluten" name="crust">
+                </div>
+
+                <h3>What kind of toppings would you like?</h3><br>
+                <h4>Meat - $1.50 per topping</h4>
+                <div class="formgroup">
+                    <label for="sausage">Sausage - </label>
+                    <input type="checkbox" id="sausage" value="sausage">
+                </div>
+                <div class="formgroup">
+                    <label for="pepperoni">Pepperoni - </label>
+                    <input type="checkbox" id="pepperoni" value="pepperoni">
+                </div>
+                <div class="formgroup">
+                    <label for="bacon">Bacon - </label>
+                    <input type="checkbox" id="bacon" value="bacon">
+                </div>
+                <div class="formgroup">
+                    <label for="canadian">Canadian Bacon - </label>
+                    <input type="checkbox" id="canadian" value="canadian">
+                </div>
+                <div class="formgroup">
+                    <label for="chicken">Chicken - </label>
+                    <input type="checkbox" id="chicken" value="chicken">
+                </div>
+<br>
+                <h4>Veggies - $1.00 per topping</h4>
+                <div class="formgroup">
+                    <label for="mushroom">Mushrooms - </label>
+                    <input type="checkbox" id="mushroom" value="mushroom">
+                </div>
+                <div class="formgroup">
+                    <label for="onion">Onions - </label>
+                    <input type="checkbox" id="onion" value="onion">
+                </div>
+                <div class="formgroup">
+                    <label for="pineapple">Pineapple - </label>
+                    <input type="checkbox" id="pineapple" value="pineapple">
+                </div>
+                <div class="formgroup">
+                    <label for="olive">Black Olives - </label>
+                    <input type="checkbox" id="olive" value="olive">
+                </div>
+                <div class="formgroup">
+                    <label for="jalapeno">Jalapenos - </label>
+                    <input type="checkbox" id="jalapeno" value="jalapeno">
+                </div>
+                <div class="formgroup">
+                    <label for="spinach">Spinach - </label>
+                    <input type="checkbox" id="spinach" value="spinach">
+                </div>
+            </div>
+            <div id="delivery" class="tab-pane">
+                <h2>Delivery Information</h2>
+                <form>
+                    <div class="formgroup">
+                        <label for="name">Name - </label>
+                        <input type="text" id="name">
+                    </div>
+                    <div class="formgroup">
+                        <label for="address">Address - </label>
+                        <input type="text" id="address">
+                    </div>
+                    <div class="formgroup">
+                        <label for="number">Phone Number - </label>
+                        <input type="text" id="number">
+                    </div>
+                </form>
+            </div>
+            <div id="confirm" class="tab-pane"?>
+                <h2>Confirm Order</h2>
+                <div id="yourorder">
+                    <p>You ordered: A <span id="size"></span> <span id="topping"></span> pizza with <span id="crust"></span> crust.</p>
+                </div>
+                <div>
+                    <p>Name: <span id="custName"></span></p>
+                </div>
+                <div>
+                    <p>Address: <span id="custAdd"></span></p>
+                </div>
+                <div>
+                    <p>Phone Number: <span id="custNumb"></span></p>
+                </div>
+
+
+                <div>
+                    <p>Subtotal Cost: $<span id="subTotal"></span></p>
+                </div>
+                <div>
+                    <p>Total Tax: $<span id="taxTotal"></span></p>
+                </div>
+                <div>
+                    <p>Total Cost ($2.00 Delivery fee): $<span id="pizzaTotal"></span></p>
+                </div>
+                <button id="confirmorder">Confirm Order</button>
+            </div>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="stuff.js"></script>
+</body>
+</html>

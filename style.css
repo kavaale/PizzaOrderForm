@@ -1,0 +1,16 @@
+body {
+    padding: 25px;
+    background-image: url("0DfHleK.jpg");
+}
+
+.tab-pane {
+    padding: 10px;
+    background-color: lightgray;
+    border: 3px black solid;
+}
+
+.nav-link {
+    background-color: lightgray;
+    border: 3px black solid;
+}
+
